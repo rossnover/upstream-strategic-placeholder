@@ -1,0 +1,76 @@
+/* apply a natural box layout model to all elements */
+html {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+*, *:before, *:after {
+  -moz-box-sizing: inherit; -webkit-box-sizing: inherit; box-sizing: inherit;
+}
+
+
+/* reset some common browser styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  }
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+pre {
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap:   break-word;
+}
+
+
+/* variables */
+$blue: #3399cc;
+$grey: #636f73;
+
+$screen-sm: 550px;
+$screen-md: 900px;
+$screen-lg: 1200px;
+
+/* styles */
+
+.content{
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 30px;
+	font-size: 20px;
+	line-height: 1.5;
+	color: $grey;
+	font-family: 'Proxima Nova', Helvetica, Arial, sans-serif;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	font-smooth: auto;
+	@media (max-width: $screen-sm) {
+		font-size: 16px;
+	}
+}
+a{
+	color: $blue;
+	transition: all 0.1s;
+	&:hover{
+		text-decoration: none;
+		opacity: 0.8;
+	}
+}
+.logo{
+	margin: 200px 0 50px;
+	text-align: center;
+	@media (max-width: $screen-md) {
+		margin-top: 100px;
+	}
+	@media (max-width: $screen-sm) {
+		margin-top: 50px;
+	}
+	img{
+		margin: auto;
+	}
+}
